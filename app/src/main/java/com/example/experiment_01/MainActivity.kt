@@ -30,7 +30,13 @@ class MainActivity : AppCompatActivity() {
 
         font.setOnClickListener {
             fontsize=(fontsize+5)%50
-            toast.textSize=fontsize
+            if(fontsize==0f){
+                toast.textSize=5f
+            }
+            else{
+                toast.textSize=fontsize
+            }
+
         }
 
         style.setOnClickListener {
